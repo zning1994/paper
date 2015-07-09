@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<title>固本思源 传承文化</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>固本思源 传承文化</h1>
+
+<h1>——浅谈传承中国优秀传统文化</h1>
+
+<h2>山东科技大学 信息科学与工程学院 计算机科学与技术2013-4班 张宁</h2>
+
+<blockquote><p>摘要：改革开放以来，中国优秀传统文化传承研究视野不断拓宽，研究力度不断加强，逐渐走向了学术观点细分、成果质量不断提高的新阶段。本文试从中国“传统文化”及其传承的探讨与思考、中国优秀传统文化传承的文化资源、中国优秀传统文化传承的现实境遇等视域对已有研究成果进行梳理分析。瞻望了优秀传统文化传承研究的趋势，即构建立足于现代实践、顺应时代潮流、融会贯通的优秀传统文化传承体系。</p>
+
+<p><strong><em>关键词：中国优秀传统文化 文化传承 形势与政策</em></strong></p></blockquote>
+
+<h3>一、什么是优秀传统文化</h3>
+
+<p>什么是文化?一棵小树苗,长在荒郊野外,它不是文化,把它移栽到自己家的庭院里,它就成为文化。前者具有天然性,后者具有人为性,所以,天然性和人为性是区分文化和非文化的第一个标准。那么,具有人为睦的是否都是文化呢?不全是。感冒了打个喷嚏,是自然的人为,它不是文化。开会的地点改变了出个通知,它是故意的人为,出通知和通知本身都是文化,因此,自然的人为和故意的人为是区分文化和非文化的第二个标准。我把文化定义为“带有故意人为的过程与结果”。文化有先进和落后之分,有雅俗之分,有高下之分,“先进的”、“雅的”、“高的”文化就是“文明”。我们平时常说“文化是物质文明和精神文明的总和”,也说“文化是物质文明、精神文明和制度文明的总和”。</p>
+
+<h3>二、对大学生进行中国优秀传统文化教育的必要性</h3>
+
+<h4>（一）优秀传统文化蕴含以爱国主义为核心的民族精神</h4>
+
+<p>胡锦涛总书记曾说过：“中华民族的优秀文化，生生不息，绵延不绝，是我国人民几千年来克服艰难险阻、战胜内忧外患、创造幸福生活的强大精神力量”。从《离骚》，到《正气歌》；从“天下兴亡，匹夫有责”，到“壮志饥餐胡虏肉，笑谈渴饮匈奴血”；从“人生自古谁无死，留取丹心照汗青”，到“苟利国家生死以，岂因祸福避趋之”，都体现了伟大的民族精神。中华民族的历史是团结统一、爱好和平、勤劳勇敢、自强不息的民族精神形成的过程，这种精神贯穿于整个传统文化之中，爱国主义是中华民族精神的核心。当前，我们需要借助优秀传统文化的资源和力量，在大学生中开展弘扬以爱国主义为核心的民族精神教育，培养他们强烈的民族意识和爱国情怀，树立起为祖国的繁荣富强贡献自己全部力量的坚定信念，增强建设祖国、振兴中华的责任感。</p>
+
+<h4>（二）优秀传统文化蕴含中华民族传统美德</h4>
+
+<p>中华民族的传统美德是中华民族精神的集中体现，是中华民族在文明发展历史过程中，沉淀、流传下来，有益于后代的优秀道德文化遗产，凝聚着中华民族的“魂”。道德教育一旦离开本民族文化的根，就会变成断了线的风筝。孔子曰：“君子怀德”，“君子务本，本立而道生”。《道德经》中说人生者，珍贵在生，然而只有“道生之，德蓄之”才能使得生而美，真而美，美而善。从儒家经典著作中集中体现的“仁、义、礼、智、信”到张岱年总结出中华民族十大传统美德，即仁爱孝悌、谦和好礼、诚信知报、精忠爱国、克己奉公、修己慎独、见利思义、勤俭廉正、笃实宽厚和勇毅力行，传统文化中蕴含的这些美德为我们指明了完善人格和道德品质，促进个人健康发展的路径。中国优秀传统文化中“自强不息”、“艰苦创业”的顽强意志，“三军可夺帅，匹夫不可夺志”、“士可杀而不可辱”的威武气节，“万众一心”、“共渡时艰”的团结意识，“富贵不能淫、贫贱不能移、威武不能屈”的大丈夫人格等等，无一不是锻造青年大学生思想作风和意志品质的文化养料。</p>
+
+<h4>（三）优秀传统文化蕴含崇高的理想信念</h4>
+
+<p>《大学》中提出了人生修养的“八目”，即“格物、致知、诚意、正心、修身、齐家、治国、平天下”。将“修身”视为“齐家、治国、平天下”的根本，同时指出，“修身”不是“独善其身”，修己与“敬”、“安人”、“百姓”密切相关，“修身”就是要达到“修、齐、治、平”的政治理想。此外，从“天行健，君子以自强不息”，“地势坤，君子以厚德载物”的不懈进取的人生态度，“先天下之忧而忧，后天下之乐而乐”的人生气度，最终到达“天下为公”的“大同”理想，优秀传统文化为大学生树立崇高的人生理想和远大的人生信念提供了深厚的文化积淀，大学生可以从中国优秀传统文化中找到生命的智慧和生存的勇气。优秀传统文化为理想信念教育和健全人格的培养提供了大量鲜活的素材，也为帮助学生更好地理解科学社会主义，坚定共产主义最高理想信念做出了有益补充。</p>
+
+<h3>三、完善和拓宽大学生中国优秀传统文化教育的途径</h3>
+
+<h4>（一）坚持知识、情感、行为的有机统一，积极开展社会教育实践活动</h4>
+
+<p>朱熹说：“知、行常相须，论先后，知为先，论轻重，行为重。”荀子说，“学至于行而后止”。可见，学习的过程不能只止于获取知识而应该最终落实到具体的行为之上。社会实践是高校人才培养的重要途径，是大学生优秀传统文化教育的重要环节，高校必须重视大学生传统文化社会实践活动的长期开展。一是要把实践活动纳入学校教学计划，规定学时学分，对大学生参加实践活动提出时间和任务要求；二是要划拨传统文化实践活动的专项经费；三是要建立大学生传统文化教育实践基地。</p>
+
+<h4>（二）积极营造良好的校园文化氛围</h4>
+
+<p>校园文化是指以学生为主体，以校园精神为主要特征的群体文化。校园文化可以通过营造一个育人的环境和氛围来达到育人的目的。一方面，高校要把创造良好的校园文化氛围作为载体，把优秀传统文化精神渗透到学校的校园建筑、教学设施和各种人文景观当中，大力打造大学生传统文化教育的外在环境。另一方面，要通过校园网络、电视台、校报、学生社团刊物等传媒手段，在学生中广泛地宣传中国优秀传统文化，充分发挥校园传媒的功能，使校园处处体现中国优秀传统文化教育的韵味。需要强调的是，加强中国优秀传统文化教育必须充分利用网络环境，占领网上阵地，扩大中国优秀传统文化教育的受众面，增强教育的互动性，使教育内容更加生动和新颖。</p>
+
+<h4>（三）加强制度建设，完善教育机制</h4>
+
+<p>加强优秀传统文化教育的制度建设和机制建设，才能最终保证教育的实效性。在制度建设方面，首先要建立健全传统文化教育的领导责任制度和教育工作实施计划及方案，形成科层化和规范化的体系，保证教育的顺利开展。学校党政领导要关心、重视大学生中国优秀传统文化教育，学校宣传部、学工处、校团委、教务处等部门要齐心合力开展工作。建立和完善教师培训制度、专项经费使用制度和实践活动基地建设制度等，从各方面为传统文化教育的开展提供人力、物力、财力的支持和保障。</p>
+
+<p>中国优秀传统文化博大精深，在对国民进行思想道德教育的过程中发挥着重要的作用，而大学生作为富有生命力的社会群体，对中国传统文化的认识和理解程度，往往影响着社会对这一问题的关注。只有立足于中华传统文化，融传统与现代，东方与西方文化精华于一体，才能确保中华民族优秀传统文化的精髓得以传承，并在传承中发展，发展中创新，创新中繁荣。文化不仅要继承，更要创新，传承与创新并举的传统文化教育才能真正地实现文化育人的最终目标。</p>
+
+<h3>参考文献</h3>
+
+<p>[1]朱萌,张立成. 大学生中国优秀传统文化教育探析[J]. 思想教育研究,2011,11:17-21.</p>
+
+<p>[2]王昊. 中国优秀传统文化传承研究综述[J]. 学理论,2015,10:198-199.</p>
+
+<p>[3]陈丛耘,孙汝建. 中国优秀传统文化教育的缺失与重建[J]. 南通大学学报(教育科学版),2006,04:5-9.</p>
+</body>
+</html>
