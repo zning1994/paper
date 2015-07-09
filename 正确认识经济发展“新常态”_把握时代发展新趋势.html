@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<title>正确认识经济发展“新常态” 把握时代发展新趋势</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>正确认识经济发展“新常态” 把握时代发展新趋势</h1>
+
+<h2>山东科技大学 信息科学与工程学院 计算机科学与技术2014-3班 唐静</h2>
+
+<blockquote><p>摘要：“新常态”绝对不仅仅是经济速度的放缓，在经济速度放缓的背后，还有经济结构的优化、增长动力的切换、制度环境的改变。如果我们认识不到新常态下的新趋势、新特征、新动力，不仅难以适应新常态，更难以把握经济工作的主动权。</p>
+
+<p><strong><em>关键词：经济发展 新常态 形势与政策</em></strong></p></blockquote>
+
+<p>我国经济发展进入新常态，这是中央从我国经济发展阶段性特征出发作出的重大战略判断，具有重大而深远的意义。广大学者认为，正确认识和处理经济发展新常态中的若干关系，方能主动适应新常态，有效实现更高层次上经济的持续健康较快发展。</p>
+
+<p>一是新常态与旧常态的关系。新常态自然是相对于旧常态而言的，所以认识新常态，首先要厘清旧常态。与经济发展刚刚进入的新常态相对应的旧常态，是此前一个时期内我国经济发展的一种相对稳定的状态。旧常态下我国经济发展取得了举世瞩目的成就，但规模速度型粗放增长模式所带来的资源、环境约束严重，国民收入分配结构性失衡加剧，经济增长对房地产业的依赖度过大，高信贷、高货币投放对经济系统的稳定性造成一定伤害。可见，经济发展旧常态本身就蕴含着向新常态过渡的内在要求。</p>
+
+<p>二是下台阶与上台阶的关系。新常态下，“三期”叠加，经济发展速度下台阶在所难免，但速度下台阶，所要换取的是质量上台阶。当下我国经济发展的条件正在和已经出现诸多新的变化。消费需求的特征，从过去的模仿型排浪式转变为个性化、多样化；生产能力的状况，从过去长期的供给不足转变为传统产业的供给能力大幅超过需求；生产要素的运用，从过去更多依靠低劳动力成本优势转变为更多依靠人力资本和技术进步；资源环境约束，从过去能源资源和生态环境空间相对较大转变为环境承载能力达到或接近上限；市场竞争，从过去主要是数量扩张和价格竞争转向质量型、差异化为主的竞争。如此多的新变化，都要求我们一方面顺势而为，把增长的速度降下来，一方面乘势而上，把增长的质量大力提上去，坚持经济发展以提高质量和效益为中心。从根本上说来，经济运行的质量和效益，将直接决定着中国经济的行稳致远。</p>
+
+<p>三是中高速与中高端的关系。保持中高速增长，推动经济发展迈向中高端水平，这是最近中央经济工作会议提出的指导我国经济持续健康发展的又一非权宜之策。在这里，“中高速”、“中高端”成为新常态下经济发展同时追求的两个并行不悖的目标。</p>
+
+<p>四是新的稳态与革新求变的关系。经济发展新常态作为经济发展进程中的一种新的稳态，并不意味着无需继续革新求变，恰恰相反，它需要通过不断的革故鼎新、改革创新以巩固与发展。这是因为，新常态的形成与巩固是一个渐进的过程，它需要经过一系列的改革创新才能在一个新的层次上展现并稳定下来；新常态作为新的层次上的稳态，这种稳态也是相对的，其变化却是绝对的，而这种变化也需要不断的改革创新加以推动。改革创新本身也是一个过程，既有许多在旧常态下已开始的改革，需要在新常态下继续推进；又有许多在旧常态下尚未及开始的改革尤其是最难啃的骨头，需要在新常态下启动并组织攻坚；还有许多在新常态下必然会出现的新情况需要不断进行新的改革。可见，改革创新是一个永恒的主题，由此我们可以对习近平总书记关于“改革永远在路上”的至理名言有更深的领悟，也可以对中央确定的“稳中求进”总基调的实质有更准确的把握。</p>
+
+<p>五是适应新常态与引领新常态的关系。在认识新常态、适应新常态、引领新常态这一当前和今后一个时期我国经济发展的“大逻辑”中，“认识”是前提，“适应”是基础，“引领”是导向。新常态是经济发展大势，如大海潮流，浩浩荡荡，顺势而为，主动适应，方能事半功倍。但仅仅这样还不够，还需要与因势利导、积极引领相结合。在主动适应新常态的基础上积极引领新常态，才能在新阶段更好地保证经济发展这艘大船沿着正确的航向乘风破浪远行。</p>
+
+<p>六是此地新常态与彼地新常态的关系。中央作出我国经济发展进入新常态的重大判断显然是就全国整体而言的，至于不同地区，则因其具体发展阶段的不同而在进入的时间和程度上有所差别。目前我国发达地区己进入工业化的后期甚或后工业化时期，从发展驱动力的视角看，相应已进入迈克尔·波特经济发展四阶段中的创新驱动阶段；而欠发达地区尚处于工业化的中期，少数地区甚至尚在工业化的初期，目前相应处于投资驱动或投资驱动向创新驱动过渡阶段。由此决定了发达地区已较早进入新常态，欠发达地区一般正处于旧常态向新常态转变之中。即使较早进入新常态的地区，进入的程度也不尽一样。确立这样的观点，对于从实际出发辩证认识和准确把握新常态，坚持以科学的态度差别化推进经济社会发展，至关重要。就是说，在适应和引领新常态的问题上，一方面需要积极的态度和高度的热情，另一方面也需要冷静的思考和科学的精神，不同地区之间切忌搞一风吹，一刀切，齐步起，而应准确定位符合自身实际的发展思路、目标、任务和责任。</p>
+
+<p>经济“新常态”是在全面结构性改革进程中重构新的增长模式的过程，本质上是改革新常态，离不开扎扎实实的改革行动。实际上，许多正在深入推进的改革，都与“新常态”关系密切，目前的主要任务不是保证在新常态下如何推进改革的问题，而是保证坚持全面改革以实现经济向新常态过渡的问题。过去旧常态下的改革是局部的改革，而“新常态”的改革将是整体性的改革。要坚持问题导向，不失时机地推进各项改革，消除制约生产要素供给和生产率提高的制度性障碍，力争在较短时间内构筑起有利于增长阶段转换和新增长模式形成的体制基础。李克强总理指出，中国经济平稳运行不靠强刺激，靠强改革激发市场活力。中央政府不会采用强刺激的调控手段，深化改革的节奏会不间断地持续下去。而改革的核心是从制度层面打破制约未来经济增长的供给瓶颈，对冲潜在增速的下行压力，尽快形成市场决定资源配置的新常态。首先必须理顺经济活动中的政府与市场关系，划清政府和市场的边界，把市场能做的事、社会能做的事、企业能做的事交给市场、社会和企业去完成。要围绕简政放权深化改革，加快建立和完善政府权力清单制度，做到“法无授权不可为”，加快制定市场准入负面清单，做到“法无禁止即可为”；围绕产业转型升级深化改革，加快劳动力、土地、资金等要素资源市场化配置改革，促进要素资源从效率低的部门或行业向效率高的部门或行业流动；深化垄断行业和事业单位改革，减少管制、扩大竞争，释放民间投资潜力；围绕推进新型城镇化深化改革，以解决农村转移人口市民化为重点，推动户籍制度、农村土地制度改革等等，进一步释放改革红利。</p>
+</body>
+</html>
