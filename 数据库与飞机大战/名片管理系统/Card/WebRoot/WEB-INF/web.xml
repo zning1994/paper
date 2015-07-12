@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.manager.servlet.loginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxUsersServlet</servlet-name>
+    <servlet-class>com.manager.servlet.AjaxUsersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxEmailServlet</servlet-name>
+    <servlet-class>com.manager.servlet.AjaxEmailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxCompany</servlet-name>
+    <servlet-class>com.manager.servlet.AjaxCompany</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxDepartment</servlet-name>
+    <servlet-class>com.manager.servlet.AjaxDepartment</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.manager.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LeaveServlet</servlet-name>
+    <servlet-class>com.manager.servlet.LeaveServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterSelectAllServlet</servlet-name>
+    <servlet-class>com.manager.servlet.RegisterSelectAllServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteRegister</servlet-name>
+    <servlet-class>com.manager.servlet.DeleteRegister</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddUserServlet</servlet-name>
+    <servlet-class>com.manager.servlet.AddUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserSelectServlet</servlet-name>
+    <servlet-class>com.manager.servlet.UserSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CompanySelectServlet</servlet-name>
+    <servlet-class>com.manager.servlet.CompanySelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <servlet-class>com.manager.servlet.DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteCompany</servlet-name>
+    <servlet-class>com.manager.servlet.DeleteCompany</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CompanyAddServlet</servlet-name>
+    <servlet-class>com.manager.servlet.CompanyAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateCompany</servlet-name>
+    <servlet-class>com.manager.servlet.UpdateCompany</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CompanyAlterServlet</servlet-name>
+    <servlet-class>com.manager.servlet.CompanyAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DepartmentSelectServlet</servlet-name>
+    <servlet-class>com.manager.servlet.DepartmentSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeletePosition</servlet-name>
+    <servlet-class>com.manager.servlet.DeletePosition</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteDepartment</servlet-name>
+    <servlet-class>com.manager.servlet.DeleteDepartment</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DepartmentAddServlet</servlet-name>
+    <servlet-class>com.manager.servlet.DepartmentAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateDepartment</servlet-name>
+    <servlet-class>com.manager.servlet.UpdateDepartment</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DepartmentAlterServlet</servlet-name>
+    <servlet-class>com.manager.servlet.DepartmentAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PositionSelectServlet</servlet-name>
+    <servlet-class>com.manager.servlet.PositionSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PositionAddServlet</servlet-name>
+    <servlet-class>com.manager.servlet.PositionAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PositionAlterServlet</servlet-name>
+    <servlet-class>com.manager.servlet.PositionAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdatePosition</servlet-name>
+    <servlet-class>com.manager.servlet.UpdatePosition</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PowerSelectServlet</servlet-name>
+    <servlet-class>com.manager.servlet.PowerSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdatePower</servlet-name>
+    <servlet-class>com.manager.servlet.UpdatePower</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PowerAlterServlet</servlet-name>
+    <servlet-class>com.manager.servlet.PowerAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AlterPasswordServlet</servlet-name>
+    <servlet-class>com.manager.servlet.AlterPasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxEmail</servlet-name>
+    <servlet-class>com.manager.servlet.AjaxEmail</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxUsersAlterServlet</servlet-name>
+    <servlet-class>com.user.servlet.AjaxUsersAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxEmailAlterServlet</servlet-name>
+    <servlet-class>com.user.servlet.AjaxEmailAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UsersAlterServlet</servlet-name>
+    <servlet-class>com.user.servlet.UsersAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxPasswordServlet</servlet-name>
+    <servlet-class>com.user.servlet.AjaxPasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PasswordAlterServlet</servlet-name>
+    <servlet-class>com.user.servlet.PasswordAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GroupAddServlet</servlet-name>
+    <servlet-class>com.user.servlet.GroupAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxGroupServlet</servlet-name>
+    <servlet-class>com.user.servlet.AjaxGroupServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GroupSelectServlet</servlet-name>
+    <servlet-class>com.user.servlet.GroupSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GroupInfoServlet</servlet-name>
+    <servlet-class>com.user.servlet.GroupInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GroupSelfServlet</servlet-name>
+    <servlet-class>com.user.servlet.GroupSelfServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GroupSelfInfoServlet</servlet-name>
+    <servlet-class>com.user.servlet.GroupSelfInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GroupAlterServlet</servlet-name>
+    <servlet-class>com.user.servlet.GroupAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateGroup</servlet-name>
+    <servlet-class>com.user.servlet.UpdateGroup</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxGroupAlterServlet</servlet-name>
+    <servlet-class>com.user.servlet.AjaxGroupAlterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GroupDeleteServlet</servlet-name>
+    <servlet-class>com.user.servlet.GroupDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SuggestServlet</servlet-name>
+    <servlet-class>com.user.servlet.SuggestServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DataOutServlet</servlet-name>
+    <servlet-class>com.user.servlet.DataOutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CardSelectServlet</servlet-name>
+    <servlet-class>com.user.servlet.CardSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CardSelfServlet</servlet-name>
+    <servlet-class>com.user.servlet.CardSelfServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GroupExcelServlet</servlet-name>
+    <servlet-class>com.user.servlet.GroupExcelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CardExcelServlet</servlet-name>
+    <servlet-class>com.user.servlet.CardExcelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogServlet</servlet-name>
+    <servlet-class>com.manager.servlet.LogServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddInGroupServlet</servlet-name>
+    <servlet-class>com.user.servlet.AddInGroupServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Group_CardServlet</servlet-name>
+    <servlet-class>com.user.servlet.Group_CardServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Group_CardDeleteServlet</servlet-name>
+    <servlet-class>com.user.servlet.Group_CardDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CollectionAddServlet</servlet-name>
+    <servlet-class>com.user.servlet.CollectionAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CollectionSelectServlet</servlet-name>
+    <servlet-class>com.user.servlet.CollectionSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CollectionDeleteServlet</servlet-name>
+    <servlet-class>com.user.servlet.CollectionDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CardInfoServlet</servlet-name>
+    <servlet-class>com.user.servlet.CardInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CardModifyServlet</servlet-name>
+    <servlet-class>com.user.servlet.CardModifyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BranchServlet</servlet-name>
+    <servlet-class>com.user.servlet.BranchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CardDeleteServlet</servlet-name>
+    <servlet-class>com.user.servlet.CardDeleteServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxUsersServlet</servlet-name>
+    <url-pattern>/ajaxUsers</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxEmailServlet</servlet-name>
+    <url-pattern>/ajaxEmail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxCompany</servlet-name>
+    <url-pattern>/ajaxCompany</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxDepartment</servlet-name>
+    <url-pattern>/ajaxDepartment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeaveServlet</servlet-name>
+    <url-pattern>/LeaveServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterSelectAllServlet</servlet-name>
+    <url-pattern>/RegisterSelectAllServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteRegister</servlet-name>
+    <url-pattern>/DeleteRegister.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddUserServlet</servlet-name>
+    <url-pattern>/AddUserServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserSelectServlet</servlet-name>
+    <url-pattern>/UserSelectServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CompanySelectServlet</servlet-name>
+    <url-pattern>/CompanySelectServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteUserServlet</servlet-name>
+    <url-pattern>/DeleteUserServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCompany</servlet-name>
+    <url-pattern>/DeleteCompany.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CompanyAddServlet</servlet-name>
+    <url-pattern>/CompanyAddServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCompany</servlet-name>
+    <url-pattern>/UpdateCompany.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CompanyAlterServlet</servlet-name>
+    <url-pattern>/CompanyAlterServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DepartmentSelectServlet</servlet-name>
+    <url-pattern>/DepartmentSelectServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletePosition</servlet-name>
+    <url-pattern>/DeletePosition.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteDepartment</servlet-name>
+    <url-pattern>/DeleteDepartment.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DepartmentAddServlet</servlet-name>
+    <url-pattern>/DepartmentAddServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateDepartment</servlet-name>
+    <url-pattern>/UpdateDepartment.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DepartmentAlterServlet</servlet-name>
+    <url-pattern>/DepartmentAlterServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PositionSelectServlet</servlet-name>
+    <url-pattern>/PositionSelectServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PositionAddServlet</servlet-name>
+    <url-pattern>/PositionAddServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PositionAlterServlet</servlet-name>
+    <url-pattern>/PositionAlterServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePosition</servlet-name>
+    <url-pattern>/UpdatePosition.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PowerSelectServlet</servlet-name>
+    <url-pattern>/PowerSelectServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdatePower</servlet-name>
+    <url-pattern>/UpdatePower.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PowerAlterServlet</servlet-name>
+    <url-pattern>/PowerAlterServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AlterPasswordServlet</servlet-name>
+    <url-pattern>/AlterPasswordServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxEmail</servlet-name>
+    <url-pattern>/AjaxEmailServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxUsersAlterServlet</servlet-name>
+    <url-pattern>/AjaxUsersAlterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxEmailAlterServlet</servlet-name>
+    <url-pattern>/AjaxEmailAlterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UsersAlterServlet</servlet-name>
+    <url-pattern>/UsersAlterServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxPasswordServlet</servlet-name>
+    <url-pattern>/AjaxPasswordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PasswordAlterServlet</servlet-name>
+    <url-pattern>/PasswordAlterServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GroupAddServlet</servlet-name>
+    <url-pattern>/GroupAddServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxGroupServlet</servlet-name>
+    <url-pattern>/AjaxGroupServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GroupSelectServlet</servlet-name>
+    <url-pattern>/GroupSelectServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GroupInfoServlet</servlet-name>
+    <url-pattern>/GroupInfoServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GroupSelfServlet</servlet-name>
+    <url-pattern>/GroupSelfServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GroupSelfInfoServlet</servlet-name>
+    <url-pattern>/GroupSelfInfoServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GroupAlterServlet</servlet-name>
+    <url-pattern>/GroupAlterServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateGroup</servlet-name>
+    <url-pattern>/UpdateGroup.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxGroupAlterServlet</servlet-name>
+    <url-pattern>/AjaxGroupAlterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GroupDeleteServlet</servlet-name>
+    <url-pattern>/GroupDeleteServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SuggestServlet</servlet-name>
+    <url-pattern>/SuggestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DataOutServlet</servlet-name>
+    <url-pattern>/DataOutServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CardSelectServlet</servlet-name>
+    <url-pattern>/CardSelectServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CardSelfServlet</servlet-name>
+    <url-pattern>/CardSelfServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GroupExcelServlet</servlet-name>
+    <url-pattern>/GroupExcelServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CardExcelServlet</servlet-name>
+    <url-pattern>/CardExcelServlet.action</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>LogServlet</servlet-name>
+    <url-pattern>/LogServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddInGroupServlet</servlet-name>
+    <url-pattern>/AddInGroupServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Group_CardServlet</servlet-name>
+    <url-pattern>/Group_CardServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Group_CardDeleteServlet</servlet-name>
+    <url-pattern>/Group_CardDeleteServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CollectionAddServlet</servlet-name>
+    <url-pattern>/CollectionAddServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CollectionSelectServlet</servlet-name>
+    <url-pattern>/CollectionSelectServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CollectionDeleteServlet</servlet-name>
+    <url-pattern>/CollectionDeleteServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CardInfoServlet</servlet-name>
+    <url-pattern>/CardInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CardModifyServlet</servlet-name>
+    <url-pattern>/CardModifyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BranchServlet</servlet-name>
+    <url-pattern>/BranchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CardDeleteServlet</servlet-name>
+    <url-pattern>/CardDeleteServlet.action</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+  	<filter-name>struts2</filter-name>
+  	<filter-class>
+  		org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+  	</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>struts2</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping></web-app>

@@ -1,0 +1,42 @@
+
+create table student
+(
+ Sno   int     primary key,
+ Sname char(8),
+ Ssex  char(2) not null
+);
+y
+
+create table Course
+(
+ Cno   char(8) primary key,
+ Cname char(6) unique,
+ Cpno  char(4)
+);
+y
+
+create table teacher
+(Tno int primary key,
+ Tname char(8) not null
+)
+**************************************************************
+alter table student add  Sdept char(2)  not null;
+y
+
+alter table student modify Ssex char(4) char(3);
+y
+ 
+alter table student drop  Sdept;
+y
+  
+***************************************************************
+alter table Course add Time char(2) unique;
+y
+
+alter table Course  drop Cname;
+y
+
+alter table Course add Date char(3);
+***************************************************************
+alter table Course add Time char(4) unique;
+ 

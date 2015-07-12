@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.action.extension" value="do"></constant>
+<constant name="struts.devMode" value="true"/>
+<constant name="struts.multipart.saveDir" value="/tmp"></constant>
+<constant name="struts.locale" value="zh_CN"/>
+<constant name="struts.i18n.encoding" value="utf-8"/>
+<include file="struts-default.xml"/>
+<package name="upload" extends="struts-default">
+<action name="UploadAction" class="com.user.action.UploadAction" >
+	<result name="success">../cardmanage/cardscan.jsp</result>
+</action>
+<action name="CardModifyAction" class="com.user.action.CardModifyAction" >
+	<result name="success">../cardmanage/cardscan.jsp</result>
+</action>
+</package>
+</struts>  

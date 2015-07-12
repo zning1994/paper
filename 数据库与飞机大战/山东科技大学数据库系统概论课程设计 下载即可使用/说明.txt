@@ -1,0 +1,7 @@
+运行环境：  CodeBlokes 10.05
+
+开发环境：  CodeBlokes 10.05
+
+设计语言：  C++
+
+所存文件：  DBMS.txt

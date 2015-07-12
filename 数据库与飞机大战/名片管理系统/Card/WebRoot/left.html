@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="js/left.js" charset="gbk"></script>
+</head>
+
+<body>
+<div id="left">
+		       <div id="left_menu"></div>
+			   <div id="left_tree">
+		         <div id="tree_icon" >
+					   <div id="yh" onClick="Users()" ><img src="images/user.gif" /><a href="#"><font color="#FFFFFF">用户管理</font></div>
+					   <div id="system" onClick="Manager()" ><img src="images/system.gif"  /><a href="#" ><font color="#FFFFFF">参数管理</font></div>
+					   <div id="system1" onClick="Log()" ><img src="images/log.png" /><a href="#"><font color="#FFFFFF">日志管理</font></div>
+					</div>
+					<div class="tree_text" id="users">
+					      <li class="tree_li"><span class="list_img"><img src="images/list_img.gif" /></span><a href="RegisterSelectAllServlet.action" target="mainFrame">用户注册</a></li>
+						  <li class="tree_li"><span class="list_img"><img src="images/list_img.gif" /></span><a href="UserSelectServlet.action?all=1" target="mainFrame">用户管理</a></li>
+			     	</div>
+					<div class="tree_text" id="manager" style="display:none">
+					      <li class="tree_li"><span class="list_img"><img src="images/list_img.gif" /></span><a href="CompanySelectServlet.action?all=1" target="mainFrame">企业管理</a></li>
+						  <li class="tree_li"><span class="list_img"><img src="images/list_img.gif" /></span><a href="DepartmentSelectServlet.action?all=1" target="mainFrame">部门管理</a></li>
+						  <li class="tree_li"><span class="list_img"><img src="images/list_img.gif" /></span><a href="PositionSelectServlet.action?all=1" target="mainFrame">职务管理</a></li>
+						  <li class="tree_li"><span class="list_img"><img src="images/list_img.gif" /></span><a href="PowerSelectServlet.action?" target="mainFrame">权限管理</a></li>
+			     	</div>
+					<div class="tree_text" id="log" style="display:none">
+					      <li class="tree_li"><span class="list_img"><img src="images/list_img.gif" /></span><a href="LogServlet.action?all=1" target="mainFrame">查看日志</a></li>
+			     	</div>
+
+			   </div>
+			   					<div id="tree_down"></div>
+</body>
+</html>
