@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="create.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="2421" topLine="59" />
+	</File>
+	<File name="create.h" open="0" top="0" tabpos="0">
+		<Cursor position="137" topLine="0" />
+	</File>
+	<File name="delete.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="4365" topLine="148" />
+	</File>
+	<File name="delete.h" open="0" top="0" tabpos="6">
+		<Cursor position="115" topLine="0" />
+	</File>
+	<File name="describe.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="2368" topLine="0" />
+	</File>
+	<File name="describe.h" open="0" top="0" tabpos="0">
+		<Cursor position="66" topLine="0" />
+	</File>
+	<File name="display.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="189" topLine="3" />
+	</File>
+	<File name="display.h" open="0" top="0" tabpos="5">
+		<Cursor position="71" topLine="0" />
+	</File>
+	<File name="file_operate.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="84" topLine="30" />
+	</File>
+	<File name="file_operate.h" open="0" top="0" tabpos="9">
+		<Cursor position="66" topLine="0" />
+	</File>
+	<File name="insert.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="7623" topLine="78" />
+	</File>
+	<File name="insert.h" open="0" top="0" tabpos="5">
+		<Cursor position="105" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1106" topLine="3" />
+	</File>
+	<File name="select.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="19667" topLine="744" />
+	</File>
+	<File name="select.h" open="0" top="0" tabpos="0">
+		<Cursor position="61" topLine="0" />
+	</File>
+	<File name="update.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="8355" topLine="6" />
+	</File>
+	<File name="update.h" open="0" top="0" tabpos="0">
+		<Cursor position="70" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

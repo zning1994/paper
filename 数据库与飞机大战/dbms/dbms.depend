@@ -1,0 +1,100 @@
+# depslib dependency file v1.0
+1351277835 source:d:\dbms\main.cpp
+	<iostream>
+	<fstream.h>
+	<math.h>
+	"file_operate.h"
+	"display.h"
+	"insert.h"
+	"describe.h"
+	"delete.h"
+	"update.h"
+	"create.h"
+	"select.h"
+
+1350571674 source:d:\dbms\file_operate.cpp
+	<iostream>
+	<fstream.h>
+	<math.h>
+
+1350661113 source:d:\dbms\display.cpp
+	<iostream>
+	<fstream.h>
+	<math.h>
+	"file_operate.h"
+
+1350571674 d:\dbms\file_operate.h
+
+1350572195 d:\dbms\display.h
+
+1351314711 source:d:\dbms\insert.cpp
+	<iostream>
+	<fstream.h>
+	<math.h>
+	"file_operate.h"
+	"insert.h"
+
+1351277962 d:\dbms\insert.h
+
+1350631237 source:d:\dbms\describe.cpp
+	<iostream>
+	<fstream.h>
+	<math.h>
+	"file_operate.h"
+	"display.h"
+	"insert.h"
+	"describe.h"
+
+1350629776 d:\dbms\describe.h
+
+1350676227 source:d:\dbms\delete.cpp
+	<iostream>
+	<fstream.h>
+	<math.h>
+	"file_operate.h"
+	"delete.h"
+
+1350663523 d:\dbms\delete.h
+
+1350674112 d:\dbms\update.h
+
+1350676227 source:d:\dbms\update.cpp
+	<iostream>
+	<fstream.h>
+	<math.h>
+	"file_operate.h"
+	"update.h"
+	"delete.h"
+
+1350684272 d:\dbms\create.h
+
+1351272515 source:d:\dbms\create.cpp
+	<iostream>
+	<math.h>
+	<string.h>
+	<fstream.h>
+	<cstring>
+	"create.h"
+	"file_operate.h"
+
+1350684185 d:\dbms\select.h
+
+1351306511 source:d:\dbms\select.cpp
+	<iostream>
+	<math.h>
+	<string.h>
+	<fstream.h>
+	<cstring>
+	"file_operate.h"
+	"select.h"
+	"create.h"
+
+1351275667 source:d:\dbms\do_insert.cpp
+	<iostream>
+	<fstream.h>
+	<math.h>
+	"file_operate.h"
+	"do_insert.h"
+
+1351256060 d:\dbms\do_insert.h
+

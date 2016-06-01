@@ -1,0 +1,4 @@
+2 
+name char(100) num int 
+1
+haha 100 

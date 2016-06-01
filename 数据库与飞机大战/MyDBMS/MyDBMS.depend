@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1366855966 source:e:\code\mydbms\table.cpp
+	"Table.h"
+
+1366273894 e:\code\mydbms\table.h
+	"head.h"
+	"SQL.h"
+
+1366713154 e:\code\mydbms\head.h
+	<iostream>
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<vector>
+	<string>
+	<cctype>
+
+1366864555 e:\code\mydbms\sql.h
+	"head.h"
+	"Lexer.h"
+
+1366854899 source:e:\code\mydbms\main.cpp
+	"head.h"
+	"Lexer.h"
+
+1366864566 source:e:\code\mydbms\sql.cpp
+	"SQL.h"
+
+1366273959 source:e:\code\mydbms\workfunction.cpp
+	"head.h"
+	"Table.h"
+	"SQL.h"
+
+1366268552 source:e:\code\mydbms\emitter.cpp
+	"head.h"
+	"Table.h"
+	"SQL.h"
+
+1366856950 source:e:\code\mydbms\selecter.cpp
+	"head.h"
+	"Table.h"
+	"SQL.h"
+	"WorkFunction.h"
+
+1366460890 e:\code\mydbms\workfunction.h
+
+1366864555 source:e:\code\mydbms\lexer.cpp
+	"Lexer.h"
+
+1366858665 e:\code\mydbms\lexer.h
+	"head.h"
+
