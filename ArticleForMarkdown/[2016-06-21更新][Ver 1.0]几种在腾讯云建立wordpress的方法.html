@@ -1,0 +1,1476 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+<title>几种在腾讯云建立WordPress的方法（Linux）</title>
+
+</head>
+<body>
+<h1>几种在腾讯云建立WordPress的方法（Linux）</h1>
+
+<p>——Ver 1.0 By ZNing at <em>CISE of SDUST</em></p>
+
+<p>(Contact me: <a href="http://www.zning.net.cn">Website</a>、<a href="https://github.com/zning1994">GitHub</a>、<a href="https://www.facebook.com/zning1994">FaceBook</a>、<a href="mailto:zning@sdust.edu.cn">Email</a>、<a href="tel:+8613687671402">Mobile</a>)</p>
+
+<blockquote><p>引言：腾讯云作为国内一流的云服务提供商，云服务器CVM的使用可谓是“一键成站”，十分方便。今天我们就来介绍一下几种在腾讯云建立WordPress的方法。</p>
+
+<p>这里，我们仅介绍Linux下安装WordPress等内容托管开源程序的示例，对于在Windows下的环境配置与开源程序安装大同小异，只不过Windows下图形界面多一些使得让人看上去没那么难而已。</p>
+
+<p>使用此教程前先修知识：<a href="https://www.zning.net.cn/tech/3390.htm">Linux简单命令</a>、<a href="https://www.zning.net.cn/my/3392.htm">Vim编辑器的使用</a>（点击链接即可查看相关教程）</p></blockquote>
+
+<p><strong>本文索引目录</strong></p>
+
+<p><link rel="stylesheet" href="http://yandex.st/highlightjs/6.2/styles/googlecode.min.css"></p>
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+
+<script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/javascript">
+ $(document).ready(function(){
+      $("h2,h3,h4,h5,h6").each(function(i,item){
+        var tag = $(item).get(0).localName;
+        $(item).attr("id","wow"+i);
+        $("#category").append('<a class="new'+tag+'" href="#wow'+i+'">'+$(this).text()+'</a></br>');
+        $(".newh2").css("margin-left",0);
+        $(".newh3").css("margin-left",20);
+        $(".newh4").css("margin-left",40);
+        $(".newh5").css("margin-left",60);
+        $(".newh6").css("margin-left",80);
+      });
+ });
+</script>
+
+
+<div id="category"></div>
+
+
+<h2>【常规安装——LAMP或LNMP安装】</h2>
+
+<h3>前奏：环境检查</h3>
+
+<ol>
+<li>操作系统：Linux（本例使用的大部分在CentOS 7.x x64与Ubuntu 14.04.1 LTS 64位上可行）</li>
+<li><p>服务架构：LAMP或LNMP</p>
+
+<blockquote><p>注：此处LAMP为Linux+Apache+<strong>MariaDB</strong>+PHP，LNMP为Linux+Nginx+MySQL+PHP</p></blockquote></li>
+<li><p>软体版本：Apache 2.4、MariaDB5.5、PHP5</p></li>
+</ol>
+
+
+<h3>LAMP在CentOS上的配置</h3>
+
+<blockquote><p>这一节是按照已有域名来写的，如果暂时没有域名或者只是想配置单网站，可以先看下一节“LNMP在CentOS上的配置”</p></blockquote>
+
+<p>Apache HTTP Server（简称Apache）是Apache软件基金会的一个开放源码的网页服务器，是最流行的Web服务器端软件之一。Apache 2.4版本是Apache一重大升级版本，新版改进了缓存、代理模块，会话控制，改进异步读写、增加proxy_fcgi各方面支持等，有大幅度提升并发性能。</p>
+
+<p>下面，我们就介绍一下在Apache配置多域名或已有域名模式的WordPress，以供参考。</p>
+
+<p><strong>更新系统</strong></p>
+
+<pre><code># yum update
+</code></pre>
+
+<h4>安装并配置 Apache 网络服务器</h4>
+
+<p>CentOS 7 中默认的是 Apache 2.4 版本，Apache 官网有份很好的 <a href="http://httpd.apache.org/docs/current/vhosts/examples.html">vhost.conf 配置实例</a>。</p>
+
+<p><strong>安装</strong></p>
+
+<pre><code># yum install -y httpd
+</code></pre>
+
+<p><strong>备份配置文件</strong>（建议对于所有的配置文件，做任何更改前都先备份一份，以便应对未知错误）</p>
+
+<pre><code># mkdir ~/zningfbak
+# cp -R /etc/httpd ~/zningbak
+</code></pre>
+
+<p>其中 <code>～</code> 表示当前登录用户的用户文件夹；<code>-R</code> 参数表示递归到所有子目录</p>
+
+<p>配置虚拟主机（/etc/httpd/conf.d/vhost.conf ）</p>
+
+<pre><code># vim /etc/httpd/conf.d/vhost.conf
+</code></pre>
+
+<p>文件内需要填写的内容：</p>
+
+<pre><code>#
+# 主机 1
+# zning.net
+#
+&lt;VirtualHost *:80&gt;
+    ServerAdmin admin@zning.net
+    ServerName zning.net
+    ServerAlias www
+    # 注意下面这行末尾不要带 /
+    DocumentRoot /srv/www/zning.net/html
+
+&lt;Directory "/srv/www/zning.net/html/"&gt;
+    Options FollowSymLinks
+    # 下一行这样设置就可以在网站文件的目录中使用 .htaccess
+    AllowOverride All
+    # 下一行是替代 Allow from all 的新机制
+    Require all granted
+&lt;/Directory&gt;
+
+    ErrorLog /srv/www/zning.net/logs/error.log
+    CustomLog /srv/www/zning.net/logs/access.log combined
+    ServerSignature Off
+&lt;/VirtualHost&gt;
+
+#
+# 主机 2
+# qcloud.zning.net
+# 这是另一个位于同一服务器的网站，如果不需要则删除此段配置
+#
+&lt;VirtualHost *:80&gt;
+    ServerAdmin admin@zning.net
+    ServerName test.zning.net
+    ServerAlias test
+    DocumentRoot /srv/www/qcloud.zning.net/html
+
+&lt;Directory "/srv/www/qcloud.zning.net/html/"&gt;
+    Options FollowSymLinks
+    AllowOverride All
+    Require all granted
+&lt;/Directory&gt;
+
+    ErrorLog /srv/www/qcloud.zning.net/logs/error.log
+    CustomLog /srv/www/qcloud.zning.net/logs/access.log combined
+    ServerSignature Off
+&lt;/VirtualHost&gt;
+
+#
+# 主机 3
+# 为了以后给访问 phpMyAdmin 的时候用，也可以是别的端口，如 4444
+Listen 3366
+#
+# phpMyAdmin，访问地址：http://12.34.56.78:3366/phpMyAdmin
+#
+&lt;VirtualHost 12.34.56.78:3366&gt;
+    ServerAdmin admin@zning.net
+    DocumentRoot /srv/www/phpmyadmin/html
+&lt;Directory "/srv/www/phpmyadmin/html/"&gt;
+    Options FollowSymLinks
+    AllowOverride None
+    Require all granted
+&lt;/Directory&gt;
+    ErrorLog /srv/www/phpmyadmin/logs/error.log
+    CustomLog /srv/www/phpmyadmin/logs/access.log combined
+    ServerSignature Off
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p>虽然配置文件写好了，但是还不能启动 httpd 进程，因为上面设置的各个文件夹（网站目录）还没有创建。</p>
+
+<p>创建各个虚拟主机的文件夹（根据需要增加或删除），</p>
+
+<pre><code># 主机 1 的
+# mkdir /srv/www/zning.net/html -p
+# mkdir /srv/www/zning.net/logs
+
+# 主机 2 的
+# mkdir /srv/www/qcloud.zning.net/html -p
+# mkdir /srv/www/qcloud.zning.net/logs
+
+# 主机 3 的
+# mkdir /srv/www/phpmyadmin/html -p
+# mkdir /srv/www/phpmyadmin/logs
+</code></pre>
+
+<p>为了能够在系统启动时自动运行 Apache 服务器，需要运行下面的指令：</p>
+
+<pre><code># systemctl enable httpd
+</code></pre>
+
+<p>输出类似于，</p>
+
+<pre><code># Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+</code></pre>
+
+<p>然后启动 Apache 服务，</p>
+
+<pre><code># systemctl start httpd
+</code></pre>
+
+<p>如果上述指令提示说本来已经启动了 httpd，则重新加载它，</p>
+
+<pre><code># systemctl reload httpd
+</code></pre>
+
+<p>现在需要将 http 服务加入防火墙以允许外部访问。先启用防火墙服务，如果防火墙默认没有启动，则下述指令会提示错误，“FirewallD is not running”。</p>
+
+<pre><code># systemctl enable firewalld &amp;&amp; systemctl start firewalld
+</code></pre>
+
+<p>其中 <code>&amp;&amp;</code> 表示两条指令依次执行。</p>
+
+<p>启动后再重新执行下面的指令：</p>
+
+<p>将 HTTP 默认使用的端口 80 加入到防火墙允许列表里</p>
+
+<pre><code># firewall-cmd --add-service=http --permanent
+</code></pre>
+
+<p>其中，<code>–permanent</code> 参数表示这是一条永久防火墙规则，如果不加这个参数则重启系统后就没有这条规则了。</p>
+
+<p>而对于自定义的用于 phpMyAdmin 的 3366 端口，也需要添加相应的防火墙规则。因为是非标准端口，直接用数字表示即可，</p>
+
+<pre><code># firewall-cmd --zone=public --add-port=3366/tcp --permanent
+</code></pre>
+
+<p>重启 Firewalld 使该规则生效，</p>
+
+<pre><code># systemctl restart firewalld
+</code></pre>
+
+<p>如果要查看加入后的防火墙规则，使用指令，</p>
+
+<pre><code># firewall-cmd --list-all
+</code></pre>
+
+<p>显示结果类似于，</p>
+
+<pre><code>public (default)
+  interfaces:
+  sources:
+  services: dhcpv6-client http ssh
+  ports: 3366/tcp
+  masquerade: no
+  forward-ports:
+  icmp-blocks:
+  rich rules:
+</code></pre>
+
+<p>如果已经做好了 DNS 域名解析，现在用浏览器打开域名应该能够看到 Apache 的测试页面了。</p>
+
+<p><img src="./tencentup/QQ20160603-12.jpg" alt="Apache 的测试页面" /></p>
+
+<h4>安装和配置 MariaDB 数据库服务</h4>
+
+<p>MariaDB 是在 MySQL 基础上重建的一个数据库软件，各 Linux 发行版都陆陆续续从 MySQL 切换到了 MariaDB。CentOS 从 7 开始默认使用 MariaDB。</p>
+
+<p><strong>安装</strong></p>
+
+<pre><code># yum install -y mariadb-server mariadb
+</code></pre>
+
+<p><strong>加入随系统启动</strong></p>
+
+<pre><code># systemctl enable mariadb
+</code></pre>
+
+<p>输出结果类似于，</p>
+
+<pre><code>Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
+</code></pre>
+
+<p><strong>启动 MariaDB 守护进程（mysqld）</strong></p>
+
+<pre><code># systemctl start mariadb
+</code></pre>
+
+<p>其默认用户名还是 mysql，</p>
+
+<pre><code># top -u mysql
+</code></pre>
+
+<p>可以查看内存占用情况。</p>
+
+<p><strong>安全配置 MariaDB</strong></p>
+
+<p>使用 MariaDB 内建的安全配置脚本进行配置</p>
+
+<pre><code># mysql_secure_installation
+</code></pre>
+
+<p>这里需要配置 mysql 根用户和密码、清除其他用户、清除不需要的数据库等。输出类似于下面的执行过程，其中需要我们从键盘输入的内容用**注释出来了：</p>
+
+<pre><code>NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user.  If you've just installed MariaDB, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none):
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+Set root password? [Y/n] y **此处输入y**
+New password:***这里输入你的密码（并不会显示）***
+Re-enter new password:***再次输入***
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] y **此处输入y**
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] y **此处输入y**
+ ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] y **此处输入y**
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y **此处输入y**
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB! 
+</code></pre>
+
+<p>然后使用 MySQL 的 root 帐户（不同于 Linux 的 root 帐户，刚才设置密码了）登录进去</p>
+
+<pre><code># mysql -u root -p
+</code></pre>
+
+<p>输入密码后回车，下面是输出示例，可以看到命令提示符变为 MariaDB [(none)]></p>
+
+<pre><code>Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 20
+Server version: 5.5.44-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2015, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]&gt;
+</code></pre>
+
+<p>建一个新数据库给 WordPress 用（这里取名为 wpzning，也可以用别的名字）</p>
+
+<pre><code>MariaDB [(none)]&gt; create database wpzning;
+</code></pre>
+
+<p>创建一个新用户，并将该数据库的权限赋给他（这里只是举例，用户名为 zningwp_us，密码为 zningwp2016）</p>
+
+<pre><code>MariaDB [(none)]&gt; grant all on wpzning.* to 'zningwp_us' identified by 'zningwp2016';
+</code></pre>
+
+<p>更新权限</p>
+
+<pre><code>MariaDB [(none)]&gt; flush privileges;
+</code></pre>
+
+<p>退出数据库</p>
+
+<pre><code>MariaDB [(none)]&gt; quit
+</code></pre>
+
+<p>执行大体输出如下：</p>
+
+<pre><code>MariaDB [(none)]&gt; create database wpzning;
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [(none)]&gt; grant all on wpzning.* to 'zningwp_us' identified by 'zningwp2016';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]&gt; flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]&gt; quit
+Bye
+</code></pre>
+
+<p>备份配置文件，</p>
+
+<pre><code># cp /etc/my.cnf ~/zningbak/my.cnf.bak
+</code></pre>
+
+<p>其它的先不做了，回头用图形界面的 phpMyAdmin 来做。</p>
+
+<h4>安装和配置 PHP</h4>
+
+<p><strong>安装 PHP5</strong></p>
+
+<pre><code># yum install -y php
+</code></pre>
+
+<p>备份配置文件 <code>/etc/php.ini</code>，还有 <code>php.conf</code> 以及 <code>10-php.conf</code>，</p>
+
+<pre><code># cp /etc/php.ini ~/zningbak/php.ini.bak
+# cp /etc/httpd/conf.d/php.conf ~/zningbak/httpd/conf.d/php.conf.bak
+# cp /etc/httpd/conf.modules.d/10-php.conf ~/zningbak/httpd/conf.modules.d/10-php.conf.bak
+</code></pre>
+
+<p>并确保 <code>/etc/php.ini</code> 中有下面的语句（不同的就修改，没有的就添加，某些数值可以后再调整，这是针对一个简单的运行 WordPress 的服务器的配置）：</p>
+
+<pre><code>error_reporting = E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR
+display_errors = Off
+log_errors = On
+max_execution_time = 300
+memory_limit = 32M
+</code></pre>
+
+<p><strong>安装 PHP-MYSQL</strong></p>
+
+<p>为了在 PHP 中使用 MySQL，还需要安装这个 php-mysql 包：</p>
+
+<pre><code># yum install -y php-mysql
+</code></pre>
+
+<h4>安装和配置 phpMyAdmin （选作）</h4>
+
+<p>Remi 安装源上有最新的 PHP、MySQL 以及 phpMyAdmin 的 Yum 安装包，可以方便安装、更新。但是正在使用的 Linux 发行版 CentOS 7 上的软件包可能版本上要求不一样，所以使用 Yum 安装源优先级插件来进行控制。</p>
+
+<p>安装使用 EPEL REPOSITORY
+选择合适的源地址来安装，参考方法：安装使用 EPEL 安装源。</p>
+
+<p>到 EPEL 主页：</p>
+
+<p><a href="http://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">http://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F</a></p>
+
+<p>找到 <em>The newest version of ‘epel-release’ for EL7</em>，点击打开新页面，复制 epel-release-latest-7.noarch.rpm 的链接（数字可能有变化，当前版本是 7）。采用下面的方法直接安装：</p>
+
+<pre><code># yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+</code></pre>
+
+<p><strong>安装PHPMYADMIN</strong></p>
+
+<pre><code># yum install -y phpmyadmin
+</code></pre>
+
+<p><strong>配置</strong></p>
+
+<p>phpMyAdmin 的默认安装目录是 <code>/usr/share/phpMyAdmin</code>，同时会在 Apache 的配置文件目录中自动创建虚拟主机配置文件 <code>/etc/httpd/conf.d/phpMyAdmin.conf</code> （区分大小写）。</p>
+
+<p>同样的，先备份配置文件以防修改出现错误，</p>
+
+<pre><code># cp /etc/httpd/conf.d/phpMyAdmin.conf ~/zningbak/httpd/conf.d/phpMyAdmin.conf.bak
+</code></pre>
+
+<p>然后修改配置文件（<code>vim /etc/httpd/conf.d/phpMyAdmin.conf</code>）中有设置：</p>
+
+<pre><code>Alias /phpMyAdmin /usr/share/phpMyAdmin
+Alias /phpmyadmin /usr/share/phpMyAdmin
+</code></pre>
+
+<p>也就是说，我们可以通过绑定到 Apache 服务器上的任何域名访问 phpMyDdmin。比如这里可以通过 zning.net/phpmyadmin 或者 zning.net/phpMyAdmin 访问。但是这样一来，phpMyAdmin 的内容就与网站内容混到一起了，感觉 phpMyAdmin 成了网站的一个目录。但实际上我们并不希望别人也去访问这个页面。所以我们使用习惯的地址加端口 3366（而不是默认的 80 端口，换成自己喜欢的端口就行，再比如 3344）的方式，即 IP:port/phpMyAdmin 的链接形式访问 phpMyAdmin，加 # 注释掉上面的 Apache Alias 规则:</p>
+
+<pre><code>#Alias /phpMyAdmin /usr/share/phpMyAdmin
+#Alias /phpmyadmin /usr/share/phpMyAdmin
+</code></pre>
+
+<p>并将</p>
+
+<pre><code>&lt;Directory /usr/share/phpMyAdmin/&gt;
+.........
+&lt;/Directory&gt;
+</code></pre>
+
+<p>里面的</p>
+
+<pre><code>Require ip 127.0.0.1
+Require ip ::1
+</code></pre>
+
+<p>改成</p>
+
+<pre><code>Require all granted
+</code></pre>
+
+<p>保存退出，使之可以从任何地方都可以访问。如果本地电脑是固定 IP 的，为了安全，也可以将上面的 <code>Require all granted</code> 改成 <code>Require ip &lt;your-local-ip&gt;</code>。咱的 ADSL 就享受不到这样的待遇了。</p>
+
+<p>因为在前面创建虚拟主机配置文件 <code>/etc/httpd/conf.d/vhost.conf</code> 的时候已经为 phpMyAdmin 配置了一个端口为 2082 的虚拟主机，只能通过该虚拟主机（端口）访问 phpMyAdmin。因为 <code>/srv/www/phpmyadmin/public_html</code> 配置为 phpMyAdmin 的虚拟主机目录，为该目录创建符号连接到 phpMyAdmin 安装目录（<code>/usr/share/phpMyAdmin</code>）：</p>
+
+<pre><code># ln -sf /usr/share/phpMyAdmin /srv/www/phpmyadmin/html
+</code></pre>
+
+<p>备份然后修改 phpMyAdmin 的配置文件，</p>
+
+<pre><code># cp /etc/phpMyAdmin/config.inc.php ~/zningbak/config.inc.php.bak
+</code></pre>
+
+<p>编辑文件：</p>
+
+<pre><code># vim /etc/phpMyAdmin/config.inc.php
+</code></pre>
+
+<p>找到其中的如下代码段：</p>
+
+<pre><code>$cfg['blowfish_secret'] = '这里随便填上一串乱七八糟的字符即可，字母、数字等，长度最好大于 16 个';
+</code></pre>
+
+<p>按照上面的提示填写 <code>blowfish_secret</code> 字符串。其他的不用修改，保存并退出。</p>
+
+<p><strong>重起 APACHE 使配置生效</strong></p>
+
+<pre><code># systemctl restart httpd
+</code></pre>
+
+<p>现在就可以通过 <code>ip:port/phpMyAdmin</code> （将 IP 换为你腾讯云服务器的 IP，端口为前面设置的 phpmyadmin 的虚拟主机端口，注意大小写）访问 phpMyAdmin 了。</p>
+
+<p>使用前面创建的用户名和密码（2.3.4 中 grant 语句中包含的用户名和密码）登录 phpMyAdmin。</p>
+
+<h3>安装WordPress</h3>
+
+<p><strong>域名配置</strong></p>
+
+<p>首先配置域名DNS，这里以DNSPod为示例演示，截图中也有对相关记录的解释，接下来的其他方法也可通过此教程来配置域名解析。</p>
+
+<p>DNSPod增加解析如图：</p>
+
+<p><img src="./tencentup/QQ20160603-13.jpg" alt="DNSPod增加解析" /></p>
+
+<p>DNSPod解析详解如图：</p>
+
+<p><img src="./tencentup/QQ20160603-14.png" alt="DNSPod解析详解" /></p>
+
+<p><strong>安装</strong></p>
+
+<p>转移目录到相关目录</p>
+
+<pre><code># cd /srv/www/qcloud.zning.net/html
+</code></pre>
+
+<p>下载WordPress</p>
+
+<pre><code># wget https://cn.wordpress.org/wordpress-4.5.2-zh_CN.tar.gz
+</code></pre>
+
+<p>解压文件</p>
+
+<pre><code># tar zxvf wordpress-4.5.2-zh_CN.tar.gz
+</code></pre>
+
+<p>移动文件</p>
+
+<pre><code># mv /srv/www/qcloud.zning.net/html/wordpress/* /srv/www/qcloud.zning.net/html
+</code></pre>
+
+<p>访问网址<code>qcloud.zning.net</code>，进行最后一步的安装。</p>
+
+<p>出现如下图所示页面，单击继续：</p>
+
+<p><img src="./tencentup/QQ20160603-30.jpg" alt="WordPress最后一步的安装" /></p>
+
+<p>输入已经创建的数据库信息：</p>
+
+<p><img src="./tencentup/QQ20160603-31.jpg" alt="WordPress最后一步的安装" /></p>
+
+<p>这一步出错的原因是，网站本身对html文件夹没有读写权限，具体解决方案可以查看本节参考资料链接中关于网站用户权限的讲解。此处我们可以按照提示，通过ssh，输入<code>vim /srv/www/qcloud.zning.net/html/wp-config.php</code>来创建，并复制WordPress已经提供的内容，保存继续即可</p>
+
+<p><img src="./tencentup/QQ20160603-32.png" alt="WordPress最后一步的安装" /></p>
+
+<p>到这里说明已经连接了数据库，提供网站管理信息就可以继续安装咯。</p>
+
+<p><img src="./tencentup/QQ20160603-33.jpg" alt="WordPress最后一步的安装" /></p>
+
+<p>哇咔咔，这个页面不用解释了吧~</p>
+
+<p><img src="./tencentup/QQ20160603-34.png" alt="WordPress最后一步的安装" /></p>
+
+<p>仪表盘控制后台界面：</p>
+
+<p><img src="./tencentup/QQ20160603-35.jpg" alt="WordPress最后一步的安装" /></p>
+
+<p>首页截图：</p>
+
+<p><img src="./tencentup/QQ20160603-36.jpg" alt="WordPress最后一步的安装" /></p>
+
+<h3>LNMP在CentOS上的配置</h3>
+
+<p>Nginx是一款轻量级的Web 服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler使用。其特点是占有内存少，并发能力强。</p>
+
+<p>下面，我们就介绍一下在Nginx配置单网站模式的WordPress，以供参考。</p>
+
+<h4>安装Nginx服务程序</h4>
+
+<p>安装Nginx：</p>
+
+<pre><code># yum install -y nginx
+</code></pre>
+
+<p>使Nginx能够开机自启：</p>
+
+<pre><code># systemctl enable nginx
+</code></pre>
+
+<p>输出结果类似于，</p>
+
+<pre><code>Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.
+</code></pre>
+
+<p>重新启动Nginx：</p>
+
+<pre><code># systemctl restart nginx.service
+</code></pre>
+
+<p>安装完成后，访问IP地址，出现如下图页面的欢迎界面，即说明已经完成安装了。</p>
+
+<p><img src="./tencentup/QQ20160621-0.png" alt="安装完成Nginx的页面" /></p>
+
+<p>在这个页面我们看到</p>
+
+<blockquote><p>This is the default index.html page that is distributed with nginx on Fedora. It is located in /usr/share/nginx/html.You should now put your content in a location of your choice and edit the root configuration directive in the nginx configuration file /etc/nginx/nginx.conf.</p></blockquote>
+
+<p>这两句话，这里告诉我们Nginx默认的配置文件在哪里，以及访问路径在哪里，也就是我们需要放置WordPress的路径在哪里。先记下来，等会有用</p>
+
+<blockquote><p>这里的Nginx是最简单的安装方法，其实最合适的安装方法还是在本地环境交叉编译完成后进行的安装，也不算特别麻烦，教程详见：<a href="http://seanlook.com/2015/05/17/nginx-install-and-config/">nginx服务器安装及配置文件详解</a></p></blockquote>
+
+<h4>安装 PHP 服务程序和 MariaDB 数据库服务程序</h4>
+
+<blockquote><p>此步与上节相同，请参照上节相关子节的步骤进行即可。</p></blockquote>
+
+<p>不过按照上节步骤安装完PHP之后，需要安装一个php-fpm插件才行</p>
+
+<pre><code># yum install -y php-fpm
+</code></pre>
+
+<p>创建守护进程，并设置自启并启动：</p>
+
+<pre><code># systemctl enable php-fpm
+# systemctl start php-fpm
+</code></pre>
+
+<p>输出如下的类似内容：</p>
+
+<pre><code>Created symlink from /etc/systemd/system/multi-user.target.wants/php-fpm.service to /usr/lib/systemd/system/php-fpm.service.
+</code></pre>
+
+<p>配置完成并启动后，我们通过如下命令可以看到进程的监听状态：</p>
+
+<pre><code># netstat -antl|grep 9000 
+# ps -ef|grep php-cgi
+</code></pre>
+
+<p>输出如下的类似内容：</p>
+
+<pre><code>[root@QCLOUD share]# ps -ef|grep php-cgi
+root     12838  8024  0 10:23 pts/0    00:00:00 grep --color=auto php-cgi
+[root@QCLOUD share]# netstat -antl|grep 9000
+tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN
+</code></pre>
+
+<h4>安装WordPress</h4>
+
+<p>首先配置<code>nginx.conf</code>，通过如下命令进入编辑器：</p>
+
+<pre><code># vim /etc/nginx/nginx.conf
+</code></pre>
+
+<p>在</p>
+
+<pre><code>        location / {
+           index index.html index.php;
+        }        
+</code></pre>
+
+<p>中添加</p>
+
+<pre><code>index index.html index.php;
+</code></pre>
+
+<p>并在<code>}</code>后另起一行，添加如下内容：</p>
+
+<pre><code>         location ~ \.php$ {
+            root           html;
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_index  index.php;
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            include        fastcgi_params;
+        }
+</code></pre>
+
+<p>添加完成后，<code>server</code>代码区段的代码情况如下：</p>
+
+<pre><code>        location / {
+           index index.html index.php;
+        }
+
+         location ~ \.php$ {
+            root           html;
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_index  index.php;
+            fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+            include        fastcgi_params;
+        }
+</code></pre>
+
+<p>然后，进入刚才所列的路径：</p>
+
+<pre><code># cd /usr/share/nginx/html
+</code></pre>
+
+<p>下载WordPress</p>
+
+<pre><code># wget https://cn.wordpress.org/wordpress-4.5.2-zh_CN.tar.gz
+</code></pre>
+
+<blockquote><p>这里可能受服务器影响，北京机房下载速度不错，上海可能慢点。</p></blockquote>
+
+<p>解压文件</p>
+
+<pre><code># tar zxvf wordpress-4.5.2-zh_CN.tar.gz
+</code></pre>
+
+<p>更改与备份html文件夹现有文件：</p>
+
+<pre><code># mv index.html index.html.bak
+</code></pre>
+
+<p>移动文件</p>
+
+<pre><code># mv /usr/share/nginx/html/wordpress/* /usr/share/nginx/html
+</code></pre>
+
+<p>访问你服务器的IP地址，进行最后一步的安装。</p>
+
+<blockquote><p>安装情况同上节相关子节，请参见上一节的相关子节</p></blockquote>
+
+<h3>小结</h3>
+
+<p>这是最传统的安装方法，学习这样的安装方法主要还是为了熟悉Linux环境的命令操作与文本编辑。可以有效学习各种组件的调用执行原理。建议人人都会。</p>
+
+<h2>【懒人安装——集成环境安装(WDCP/AMH)】</h2>
+
+<h3>还是前奏：环境检查</h3>
+
+<ol>
+<li>操作系统：Linux（本例使用的大部分在CentOS 7.x x64与Ubuntu 14.04.1 LTS 64位上可行）</li>
+<li>服务架构：WDCP（提供LANMP）、AMH（提供LNMP）
+
+<blockquote><p>注：此处LANMP为Linux+Apache+Nginx+MySQL+PHP</p></blockquote></li>
+<li>软体版本：WDCP、AMH 4.2</li>
+</ol>
+
+
+<h3>在服务器上安装AMH并完成网站创建</h3>
+
+<p>Amysql Host 面板，简称AMH，是一个基于Nginx架构的类似 虚拟主机 独立面板。这个面板安装简单，非常适合Linux新手，以及一些恐惧命令行的Linux VPS用户。</p>
+
+<p>AMH的主要功能有：在线划分虚拟主机（多个网站）、FTP帐号自定义、MYSQL在线创建和管理、数据备份（支持本地和异地备份）、任务计划（crontab自动任务）、以及模块扩展，可以通过AMH官方在面板的基础功能上扩展更多的功能。面板支持在线升级，减少工作量，更傻瓜化、简单化。</p>
+
+<h4>安装AMH 4.2</h4>
+
+<blockquote><p><strong>注意：</strong>AMH 4.2已经停止维护更新，所支持系统也仅限于如下几个：
+CentOS 6 x64、CentOS 6 i386、CentOS 5 x64、CentOS 5 i386、Ubuntu 12 x64、Ubuntu 12 i386、Debian 6 x64 (squeeze)、Debian 6 i386 (squeeze)
+这里我们演示的时候，选择的是腾讯云CentOS 6.7 x64
+新版本AHM 5.x支持至所有Linux的最新系统，但是已经成为了收费软体，因此这里不选择其进行安装。</p></blockquote>
+
+<p>根据<a href="http://amh.sh/install.htm">官方提示</a>，我们按照如下操作进行安装：</p>
+
+<p>1) 使用 root 账号登录 Linux 服务器。</p>
+
+<p>2) 执行 amh 安装脚本。</p>
+
+<pre><code>wget http://amh.sh/file/AMH/4.2/amh.sh &amp;&amp; chmod 775 amh.sh &amp;&amp; ./amh.sh 2&gt;&amp;1 | tee amh.log
+</code></pre>
+
+<p>3) 根据提示输入选择1~3选项。1为安装amh，2为卸载amh，3为退出不做操作。</p>
+
+<p>输入1回车，接着输入MySQL与AMH密码即进入安装流程，安装过程大约需10至20分钟(以服务器性能为准)，最后如看到安装成功提示，说明系统已安装完成。</p>
+
+<p>成功安装后有必要请删除日志文件:amh.log，如安装失败需协助安装请把错误日志反馈我们。</p>
+
+<p>访问http://ip:8888 即可进入AMH web端管理，默认账号为admin。</p>
+
+<p>执行输出大体如下：</p>
+
+<pre><code>================================================================
+ [LNMP/Nginx] Amysql Host - AMH 4.2
+ http://Amysql.com
+================================================================
+CentOS release 6.7 (Final)
+Server
+64Bit, 1*CPU, 996MB*RAM, 2047MB*Swap
+================================================================
+[Notice] Confirm Install/Uninstall AMH? please select: (1~3)
+1) Install AMH 4.2
+2) Uninstall AMH 4.2
+3) Exit
+#? 1
+[OK] You Selected: Install AMH 4.2
+[Error] empty server ip.
+[Notice] Please input server ip:127.0.0.1(此处需要填写自己的IP)
+[OK] Your server ip is:
+127.0.0.1
+[Notice] Please input MySQL password:sdust（填写MySQL root密码，注意AMH脚本中输入密码为明文）
+[OK] Your MySQL password is:
+sdust
+[Notice] Please input AMH password:sdust（填写AMH web面板密码，注意AMH脚本中输入密码为明文）
+sdust
+
+
+
+..........(各种安装软件的输出)
+
+
+
+[OK] ams-1.5.0107-02 install completed.
+=============================================================
+ [LNMP/Nginx] Amysql Host - AMH 4.2
+ http://Amysql.com
+
+[OK] Nginx stop
+=============================================================
+ [LNMP/Nginx] Amysql Host - AMH 4.2
+ http://Amysql.com
+
+Shutting down MySQL. SUCCESS!
+[OK] MySQL stop
+=============================================================
+ [LNMP/Nginx] Amysql Host - AMH 4.2
+ http://Amysql.com
+
+Starting MySQL. SUCCESS!
+[OK] MySQL start
+=============================================================
+ [LNMP/Nginx] Amysql Host - AMH 4.2
+ http://Amysql.com
+
+[Notice] All PHP start...
+正在启动 pure-config.pl：Running: /usr/local/sbin/pure-ftpd --daemonize -A -c50 -B -C8 -D -E -fftp -H -I15 -lpuredb:/etc/pureftpd.pdb -lunix -L10000:8 -m4 -s -U133:022 -u100 -k99 -Z -p10100:10110
+
+=============================================================
+ [LNMP/Nginx] Amysql Host - AMH 4.2
+ http://Amysql.com
+
+================================================================
+[AMH] Congratulations, AMH 4.2 install completed.
+AMH Management: http://115.159.64.57:8888
+User:admin
+Password:sdust
+MySQL Password:sdust
+
+******* SSH Management *******
+Host: amh host
+PHP: amh php
+Nginx: amh nginx
+MySQL: amh mysql
+FTP: amh ftp
+Backup: amh backup
+Revert: amh revert
+SetParam: amh SetParam
+Module : amh module
+Crontab : amh crontab
+Upgrade : amh upgrade
+Info: amh info
+
+******* SSH Dirs *******
+WebSite: /home/wwwroot
+Nginx: /usr/local/nginx
+PHP: /usr/local/php
+MySQL: /usr/local/mysql
+MySQL-Data: /usr/local/mysql/data
+
+Start time: 2016年 06月 21日 星期二 11:30:42 CST
+Completion time: 2016年 06月 21日 星期二 11:44:18 CST (Use: 13 minute)
+More help please visit:http://amysql.com
+================================================================
+</code></pre>
+
+<p>接着，我们访问http://ip:8888，进入AMH web端管理，进行操作。</p>
+
+<p><img src="./tencentup/QQ20160621-00.png" alt="AMH web安装后访问图" /></p>
+
+<h4>在AMH web端配置网站访问</h4>
+
+<p><strong>配置虚拟主机</strong></p>
+
+<p>这里，我们就需要一个域名了。接下来我继续以<code>qcloud.zning.net</code>这个二级子域名来演示。</p>
+
+<p>进入后，单击<code>虚拟主机</code>下的<code>虚拟主机</code>标签，在下方的<code>新增虚拟主机</code>表单处的<code>主标识域名</code>输入需要绑定的域名，例如我这里输入<code>qcloud.zning.net</code>。注意域名需要换成自己的。</p>
+
+<p><img src="./tencentup/QQ20160621-1.png" alt="AMH web虚拟主机创建截图" /></p>
+
+<p>其他的不用动，直接点保存即可。</p>
+
+<p><strong>配置数据库</strong></p>
+
+<p>单击<code>MySQL</code>下的<code>快速建库</code>，在<code>数据库名称</code>、<code>用户名</code>、<code>用名密码</code>处输入相关信息，并记录下来。单击创建即可。如图所示。</p>
+
+<p><img src="./tencentup/QQ20160621-2.png" alt="AMH web数据库创建图" /></p>
+
+<p><strong>安装WordPress</strong></p>
+
+<p>紧接着，我们回到命令行终端界面（terminal），首先进入网站文件夹：</p>
+
+<pre><code># cd /home/wwwroot/qcloud.zning.net/web
+</code></pre>
+
+<p>备份已存在文件：</p>
+
+<pre><code># mv index.html index.html.bak
+</code></pre>
+
+<p>下载WordPress：</p>
+
+<pre><code># wget https://cn.wordpress.org/wordpress-4.5.2-zh_CN.tar.gz
+</code></pre>
+
+<p>解压文件</p>
+
+<pre><code># tar zxvf wordpress-4.5.2-zh_CN.tar.gz
+</code></pre>
+
+<p>移动文件</p>
+
+<pre><code># mv /home/wwwroot/qcloud.zning.net/web/wordpress/* /home/wwwroot/qcloud.zning.net/web
+</code></pre>
+
+<p>访问域名，进行最后一步的安装。</p>
+
+<blockquote><p>安装情况同上节相关子节，请参见上一节的相关子节</p></blockquote>
+
+<h3>在服务器上安装WDCP并完成网站创建</h3>
+
+<p>wdCP是WDlinux Control Panel的简称，是一套通过WEB控制和管理服务器的Linux服务器管理系统以及虚拟主机管理系统，旨在易于使用Linux系统做为我们的网站服务器系统，以及平时对Linux服务器的常用管理操作，均可在wdCP的后台里操作完成.</p>
+
+<p>关于WDCP的安装，这里不多介绍了，与AMH相似，而且功能跟更强大。相关<a href="http://www.wdlinux.cn/wdcp/">WDCP安装教程请单击此处获取</a>，网站上也有不少教程。</p>
+
+<blockquote><p>wdCP v3版本已经发布，更多可<a href="http://www.wdlinux.cn/bbs/forum-23-1.html">单击此处查看</a></p></blockquote>
+
+<h2>【懒人安装V2.0——腾讯云镜像安装】</h2>
+
+<h3>又是前奏：环境检查</h3>
+
+<ol>
+<li>操作系统：CentOS 6.5 x64（腾讯云镜像版本）</li>
+<li>服务架构：LAMP</li>
+<li>软体版本：腾讯云WordPress镜像</li>
+</ol>
+
+
+<h3>安装步骤</h3>
+
+<p>这个比刚才那个还简单，整个一个傻瓜操作。</p>
+
+<ol>
+<li><p>登陆腾讯云管理中心，根据你所买的服务器的地域，找到你的 CVM，点击重装系统。（注意：如服务器正在运行，则需要停止服务器才可以重装系统）</p></li>
+<li><p>重装系统时选择 <code>服务市场--&gt;建站模板--&gt;WordPress 博客平台(Centos 6.5 64 位)(8GB)</code>，之后输入root密码，点击重置即可。</p>
+
+<p> <img src=".\tencentup\QQ20160603-5.jpg" alt="WordPress 博客平台(Centos 6.5 64 位)(8GB)" /></p></li>
+<li><p>通过ssh进行连接（Linux：terminal终端；Mac：终端或iTerm；Windows：Xshell或putty）服务器，格式如下：</p>
+
+<pre><code> ssh 用户名@IP地址 e.g. ssh root@127.0.0.1
+</code></pre>
+
+<p> 进入后，通过命令<code>cat default.pass</code>查看MySQL、WordPress等相关帐密。</p>
+
+<p> <img src=".\tencentup\QQ20160603-10.png" alt="命令cat default.pass查看MySQL、WordPress等相关帐密" /></p></li>
+<li><p>按照提示，进入服务器IP，登陆相关账户可以进行设置. PHPmyAdmin 的地址为 http://ip/phpmyadmin</p>
+
+<p> <img src=".\tencentup\QQ20160603-11.jpg" alt="命令cat default.pass查看MySQL、WordPress等相关帐密" /></p></li>
+</ol>
+
+
+<h3>小结</h3>
+
+<p>这个方法比较简单，就不过多介绍了。</p>
+
+<h2>【文艺安装——Docker安装】</h2>
+
+<h3>永恒不变的前奏：环境检查</h3>
+
+<ol>
+<li>操作系统：Linux（本例使用的大部分在CentOS 7.x x64与Ubuntu 14.04.1 LTS 64位上可行）</li>
+<li>服务架构：Docker</li>
+<li>软体版本：Docker 1.9.1</li>
+</ol>
+
+
+<blockquote><p>Tips:Docker 目前只能安装在 64 位平台上，并且要求内核版本不低于 3.10，实际上内核越新越好，过低的内核版本容易造成功能的不稳定。</p></blockquote>
+
+<h3>第一节：安装Docker（演示的是CentOS 7.0 x64版本）</h3>
+
+<blockquote><p>本节节选自《Docker——从入门到实践》，图书在GitBook公开阅读且接受commit。向开源作者致敬！</p></blockquote>
+
+<p>这里1与2根据系统不同选择阅读即可，如果非深入学习不必全部阅读。</p>
+
+<h4>1. CentOS安装Docker</h4>
+
+<p>系统的要求是：64 位操作系统，内核版本至少为 3.10。</p>
+
+<p>Docker 目前支持 CentOS 6.5 及以后的版本，推荐使用 CentOS 7 系统。</p>
+
+<p><strong>安装yum软件源</strong></p>
+
+<p>首先，添加 yum 软件源。</p>
+
+<pre><code>$ sudo tee /etc/yum.repos.d/docker.repo &lt;&lt;-'EOF'
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF
+</code></pre>
+
+<p><strong>安装 docker-engine（Docker）</strong></p>
+
+<p>之后更新 yum 软件源缓存，并安装 docker-engine。</p>
+
+<pre><code>$ sudo yum update
+$ sudo yum install -y docker-engine
+</code></pre>
+
+<p>对于 CentOS 7 系统，CentOS-Extras 源中已内置 Docker，如果已经配置了CentOS-Extras 源，可以直接通过上面的 yum 命令进行安装。</p>
+
+<p>另外，也可以使用官方提供的脚本来安装 Docker。</p>
+
+<pre><code>$ sudo curl -sSL https://get.docker.com/ | sh
+</code></pre>
+
+<p><strong>后续配置</strong></p>
+
+<p>可以配置让 Docker 服务在系统启动后自动启动。</p>
+
+<pre><code>$ sudo chkconfig docker on
+</code></pre>
+
+<p>配置完成后截图：（获取Docker版本）</p>
+
+<p><img src="./tencentup/QQ20160602-0.jpg" alt="获取Docker版本" /></p>
+
+<h4>2. Ubuntu安装Docker</h4>
+
+<p><strong>更新APT镜像源</strong></p>
+
+<p>首先需要安装 apt-transport-https 包支持 https 协议的源。</p>
+
+<pre><code>$ sudo apt-get install apt-transport-https ca-certificates
+</code></pre>
+
+<p>添加源的 gpg 密钥。</p>
+
+<pre><code>$ sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+</code></pre>
+
+<p>获取当前操作系统的代号。</p>
+
+<pre><code>$ lsb_release -c
+Codename:       trusty
+</code></pre>
+
+<p>一般的，12.04 (LTS) 代号为 precise，14.04 (LTS) 代号为 trusty，15.04 代号为 vivid，15.10 代号为 wily，16.04 代号为Xenial 。这里获取到代号为 trusty。
+接下来就可以添加 Docker 的官方 apt 软件源了。通过下面命令创建 <code>/etc/apt/sources.list.d/docker.list</code> 文件，并写入源的地址内容。非 trusty 版本的系统注意修改为自己对应的代号。</p>
+
+<pre><code>$ sudo cat &lt;&lt;EOF &gt; /etc/apt/sources.list.d/docker.list
+deb https://apt.dockerproject.org/repo ubuntu-trusty main
+EOF
+</code></pre>
+
+<p>添加成功后，更新 apt 软件包缓存。</p>
+
+<pre><code>$ sudo apt-get update
+</code></pre>
+
+<p><strong>分版本的预安装任务</strong></p>
+
+<p>这里演示高于 12.04 LTS的版本</p>
+
+<ul>
+<li>Ubuntu Xenial 16.04 (LTS)</li>
+<li>Ubuntu Wily 15.10</li>
+<li>Ubuntu Trusty 14.04 (LTS)</li>
+</ul>
+
+
+<p>为了让 Docker 使用 aufs 存储，推荐安装 linux-image-extra 软件包。</p>
+
+<pre><code>$ sudo apt-get install -y linux-image-extra-$(uname -r)
+</code></pre>
+
+<p>在 Ubuntu 14.04 或者 12.04上安装Docker，需要安装apparmor（apparmor是Linux内核的一个安全模块，新版本的Ubuntu已经被整合到内核）:</p>
+
+<pre><code>$ sudo apt-get install apparmor
+</code></pre>
+
+<p><strong>安装 Docker</strong></p>
+
+<p>在成功添加源之后，就可以安装最新版本的 Docker 了，软件包名称为 docker-engine。</p>
+
+<pre><code>$ sudo apt-get install -y docker-engine
+</code></pre>
+
+<p>如果系统中存在旧版本的 Docker （lxc-docker），会提示是否先删除，选择是即可。</p>
+
+<h3>第二节：安装基础环境及WordPress</h3>
+
+<p><strong>抓取mysql镜像</strong>（灵雀云镜像，下同）：</p>
+
+<pre><code>docker pull index.alauda.cn/alauda/mysql
+</code></pre>
+
+<p><strong>抓取WordPress镜像</strong></p>
+
+<pre><code>docker pull index.alauda.cn/library/wordpress
+</code></pre>
+
+<p><strong>建立mysql容器</strong></p>
+
+<pre><code>docker run --name zning-docker-test-blog-db -e MYSQL_ROOT_PASSWORD=hellozningdocker -d index.alauda.cn/alauda/mysql
+</code></pre>
+
+<p>其中，<code>zning-docker-test-blog-db</code>是MySQL数据库名，<code>hellozningdocker</code>为这个数据库的密码。</p>
+
+<p><strong>建立WordPress容器并运行</strong></p>
+
+<pre><code>docker run --name zning-docker-test-blog --link zning-docker-test-blog-db:mysql -p 80:80 -d index.alauda.cn/library/wordpress
+</code></pre>
+
+<p>其中，<code>zning-docker-test-blog</code>为镜像名，<code>zning-docker-test-blog-db:mysql</code>为你所起的数据库名与数据库类型，<code>80：80</code>为Docker 容器端口与宿主机端口映射设置。</p>
+
+<p>启动后，我们可以通过<code>docker ps</code>命令查看现在系统中运行着的容器</p>
+
+<p><img src="./tencentup/QQ20160602-1.jpg" alt="查看现在系统中运行着的容器" /></p>
+
+<p>我们可以看到，现在数据库与WordPress的容器都运行起来了，现在就可以通过IP地址访问了~（为保护隐私，接图已隐去IP地址）</p>
+
+<p><img src="./tencentup/QQ20160602-3.jpg" alt="Docker建好的网站截图" /></p>
+
+<h3>小结</h3>
+
+<p>Docker其实看起来命令比较多，其实都不复杂。简单的几行命令就完成了。而且Docker更多的还在虚拟化技术，这都需要我们一起去探索哦~</p>
+
+<h2>参考资料</h2>
+
+<ol>
+<li><a href="https://cnzhx.net/blog/centos-rhel-install-lamp-phpmyadmin/#sysenv">CentOS 7 / RHEL 7 上安装 LAMP + phpMyAdmin - 水景一页</a></li>
+<li>白宦成. 使用腾讯云市场 WordPress 镜像部署博客[J/OL]. 黄冈师范学院, 2016-06-03.</li>
+<li><a href="https://www.gitbook.com/book/yeasy/docker_practice/details">Docker —— 从入门到实践 - GitBook</a></li>
+<li>曾金龙，肖新华，刘清编著.Docker开发实践[M].北京：人民邮电出版社.2015.</li>
+</ol>
+
+
+<blockquote><p><strong><em>下篇预告：腾讯云搭建Git服务（命令行/开源Web）</em></strong></p></blockquote>
+</body>
+</html>
